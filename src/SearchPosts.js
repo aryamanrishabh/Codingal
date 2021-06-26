@@ -19,7 +19,7 @@ const SearchPosts = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      
       <Results posts={posts} />
     </div>
   );

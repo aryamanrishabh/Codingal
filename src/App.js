@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import SearchPosts from "./SearchPosts";
 
 const App = () => {
   return (
     <div>
-      <Router>
+      {/* <Router>
         <header>
           <Navbar />
         </header>
@@ -16,7 +15,8 @@ const App = () => {
             <SearchPosts />
           </Route>
         </Switch>
-      </Router>
+      </Router> */}
+      <Navbar />
     </div>
   );
 };
