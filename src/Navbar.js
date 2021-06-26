@@ -1,5 +1,6 @@
 import logo from "../images/logo.png";
 import { useState, useEffect } from "react";
+import { Link, withRouter } from "react-router-dom";
 import Modal from "./Modal";
 import Results from "./Results";
 
@@ -56,21 +57,17 @@ const Navbar = () => {
   return (
     <div>
       <div id="navbar">
-        <img id="logo" src={logo} alt="logo" />
+        <Link to="/">
+          <img id="logo" src={logo} alt="logo" />
+        </Link>
         <span id="heading">Trial Lesson [Grade 1-3]</span>
 
         <div className="topnav-right">
           <span className="f-right">{`${min}:${sec}`}</span>
           <Modal hideModal={hideModal} show={show} />
-          <button
-            id="posts"
-            onClick={(e) => {
-              e.preventDefault();
-              requestPosts();
-            }}
-          >
-            Posts
-          </button>
+          <Link to="/posts">
+            <button id="posts">Posts</button>
+          </Link>
           <button className="f-right orange" type="button" onClick={showModal}>
             End class
           </button>
@@ -90,11 +87,12 @@ const Navbar = () => {
           //<a href="#">Link 3</a>
         </div>
       </div>
-      <div
+      {/* loader */}
+      {/* <div
         className="loader"
         id={loading ? "display-block" : "display-none"}
-      ></div>
-      <Results posts={posts} />
+      ></div> */}
+      {/* <Results posts={posts} /> */}
     </div>
   );
 };
