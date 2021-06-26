@@ -1,0 +1,142 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#topnav {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 40%;
+  border-radius: 10px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 20px 50px 80px;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+/* input {
+  display: block;
+} */
+label {
+  display: inline;
+}
+#navbar {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 20px;
+}
+#logo {
+  height: 40px;
+  width: auto;
+  padding: 10px;
+  border-right: 1px solid gray;
+}
+#navbar #heading {
+  position: relative;
+  top: -20px;
+  padding-left: 10px;
+}
+.topnav-right {
+  float: right;
+  position: relative;
+  top: 10px;
+  margin-right: 50px;
+}
+.topnav-right span {
+  padding-right: 20px;
+}
+.orange {
+  font-size: 20px;
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
+  border-color: transparent;
+  margin: 10px;
+}
+#cancel {
+  background-color: white;
+  color: black;
+  border-color: transparent;
+  font-size: 15px;
+}
+#cross {
+  float: right;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 25px;
+  color: gray;
+  font-weight: 200;
+  position: relative;
+  top: -30px;
+}
+#form-main {
+  margin-top: 50px;
+  font-size: 18px;
+}
+#form-main h2 {
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+#form-main label {
+  position: relative;
+  bottom: 2px;
+  margin-left: 5px;
+}
+input[type="radio"] {
+  width: 19px;
+  height: 19px;
+}
+.div-input {
+  margin: 20px 20px 20px 0;
+}
+#sub-form {
+  font-size: 14px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+#sub-form input[type="radio"] {
+  width: 17px;
+  height: 17px;
+}
+#sub-form textarea {
+  margin-left: 10px;
+  margin-top: 10px;
+  border: 1px solid gray;
+}
+.pad {
+  padding-top: 10px;
+}
+#posts {
+  background-color: white;
+  color: black;
+  border-color: transparent;
+  font-size: 20px;
+}
+.post {
+  width: 70%;
+  border: 1px solid gray;
+  border-radius: 10px;
+}

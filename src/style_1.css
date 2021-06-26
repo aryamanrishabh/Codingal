@@ -1,0 +1,70 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navbar {
+  display: none;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#logo {
+  height: 40px;
+  padding: 10px;
+}
+#heading {
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: -20px;
+}
+#menu {
+  float: right;
+}
+#display-block {
+  display: block;
+}
+#dislpay-none {
+  display: none;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
