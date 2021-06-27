@@ -2,20 +2,22 @@ import { useState, useEffect } from "react";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     requestPosts();
-  }, []);
+  });
 
   async function requestPosts() {
-    let res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    //let res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    let res = await fetch(
+      "http://jsonplaceholder.typicode.com/posts/?_limit=10"
+    );
 
     res = await res.json();
 
     setPosts(res);
   }
-
-  //   return requestPosts();
 
   return (
     <div>
@@ -29,6 +31,11 @@ const Posts = () => {
             </div>
           );
         })}
+        {/* loader */}
+        <div
+          className="loader"
+          id={loading ? "display-block" : "display-none"}
+        ></div>
       </div>
     </div>
   );

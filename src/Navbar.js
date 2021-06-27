@@ -15,10 +15,6 @@ const Navbar = () => {
 
   const [nav, setNav] = useState(false);
 
-  const [posts, setPosts] = useState([]);
-
-  const [loading, setLoading] = useState(true);
-
   function toggleNav() {
     setNav((current) => !current);
   }
@@ -33,8 +29,6 @@ const Navbar = () => {
 
   useEffect(() => {}, [show]);
 
-  useEffect(() => {}, [nav]);
-
   useEffect(() => {
     const timer =
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
@@ -42,17 +36,6 @@ const Navbar = () => {
     setSec(counter % 60);
     return () => clearInterval(timer);
   }, [counter]);
-
-  async function requestPosts() {
-    let res = await fetch("https://jsonplaceholder.typicode.com/posts");
-
-    res = await res.json();
-
-    setPosts(res);
-    setLoading(false);
-  }
-
-  const loader = loading ? "display-block" : "display-none";
 
   return (
     <div>
@@ -79,20 +62,12 @@ const Navbar = () => {
         <button id="menu" className="icon" onClick={toggleNav}>
           <i className="fas fa-bars"></i>
         </button>
-        <div className={nav ? "display-block" : "display-none"}>
-          <a href="#" onClick={showModal}>
-            End Class
-          </a>
-          //<a href="#">Link 2</a>
-          //<a href="#">Link 3</a>
+        <div id={nav ? "display-block" : "display-none"}>
+          <button onClick={showModal}>End Class</button>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
       </div>
-      {/* loader */}
-      {/* <div
-        className="loader"
-        id={loading ? "display-block" : "display-none"}
-      ></div> */}
-      {/* <Results posts={posts} /> */}
     </div>
   );
 };
