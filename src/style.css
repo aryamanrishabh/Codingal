@@ -149,6 +149,12 @@ input[type="radio"] {
   margin: 25px auto;
   padding: 50px;
 }
+.post h2 {
+  font-size: 22px;
+}
+.post p {
+  font-size: 16px;
+}
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */

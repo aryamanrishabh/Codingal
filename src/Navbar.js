@@ -2,7 +2,6 @@ import logo from "../images/logo.png";
 import { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import Modal from "./Modal";
-import Results from "./Results";
 
 const Navbar = () => {
   // prep for Timer
@@ -57,15 +56,18 @@ const Navbar = () => {
         </div>
       </div>
       <div id="topnav">
-        <img id="logo" src={logo} alt="logo" />
+        <Link to="/">
+          <img id="logo" src={logo} alt="logo" />
+        </Link>
         <span id="heading">Codingal</span>
-        <button id="menu" className="icon" onClick={toggleNav}>
-          <i className="fas fa-bars"></i>
-        </button>
-        <div id={nav ? "display-block" : "display-none"}>
-          <button onClick={showModal}>End Class</button>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+        <div className="dropdown">
+          <button className="dropbtn">
+            <i className="fas fa-bars"></i>
+          </button>
+          <div className="dropdown-content">
+            <Link to="/posts">Posts</Link>
+            <a href="#">End class</a>
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,6 @@ const Posts = () => {
   });
 
   async function requestPosts() {
-    //let res = await fetch("https://jsonplaceholder.typicode.com/posts");
     let res = await fetch(
       "http://jsonplaceholder.typicode.com/posts/?_limit=10"
     );
@@ -17,6 +16,7 @@ const Posts = () => {
     res = await res.json();
 
     setPosts(res);
+    setLoading(false);
   }
 
   return (
