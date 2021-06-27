@@ -4,20 +4,18 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    requestPosts();
-  });
-
   async function requestPosts() {
-    let res = await fetch(
-      "http://jsonplaceholder.typicode.com/posts/?_limit=10"
-    );
+    let res = await fetch("http://jsonplaceholder.typicode.com/posts");
 
     res = await res.json();
-
     setPosts(res);
     setLoading(false);
   }
+
+  useEffect(() => {
+    setTimeout(() => requestPosts(), 500);
+    //requestPosts();
+  });
 
   return (
     <div>
